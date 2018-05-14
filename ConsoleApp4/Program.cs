@@ -17,6 +17,7 @@ namespace ConsoleApp4
                 DatPulished = DateTime.Now,
                 PostID = 2,
                 Title = "Title"
+
             };
             content.Table_1.Add(post);
             content.SaveChanges();
