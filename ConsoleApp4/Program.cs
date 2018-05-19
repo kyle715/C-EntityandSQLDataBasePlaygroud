@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 
 namespace ConsoleApp4
 {
-    class Program 
+    class Program
     {
         static void Main(string[] args)
         {
@@ -27,16 +27,16 @@ namespace ConsoleApp4
             var lastPrice = chromeDriver.FindElementByXPath("//*[@id=\"main\"]/section/section[2]/div[2]/table/tbody/tr[1]/td[2]/span").GetAttribute("textContent");
 
             Console.WriteLine(lastPrice);
-            //var content = new TESTEntities();
-            //var post = new Table_1()
-            //{
-            //    Body = lastPrice,
-            //    DatPulished = DateTime.Now,
-            //    PostID = 7,
-            //    Title = "title"
-            //};
-            //content.Table_1.Add(post);
-            //content.SaveChanges();
+            var content = new TESTEntities();
+            var post = new Table_1()
+            {
+                Body = lastPrice,
+                DatPulished = DateTime.Now,
+                PostID = 7,
+                Title = "title"
+            };
+            content.Table_1.Add(post);
+            content.SaveChanges();
         }
     }
 }
